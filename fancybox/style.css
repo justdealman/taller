@@ -105,7 +105,10 @@
 	height:20px;
 	cursor: pointer;
 	z-index: 8040;
-	background: url('../img/close-icon.png') no-repeat center center;
+	background: url('../img/close-icon.png') no-repeat center top;
+}
+.fancybox-close:hover {
+	background-position: 0 -20px;
 }
 .fancybox-close:before {
 	content:'';
@@ -218,7 +221,6 @@
 
 .fancybox-title {
 	visibility: hidden;
-	font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
 	position: relative;
 	text-shadow: none;
 	z-index: 8050;
@@ -264,20 +266,22 @@
 }
 
 .fancybox-title-over-wrap {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	color: #fff;
-	padding: 10px;
-	background: #000;
-	background: rgba(0, 0, 0, .8);
+	position: fixed;
+	top: 18px;
+	left: 55px;
+	color: #a1a1a1;
+	font-size: 16px;
+	line-height: 26px;
+	background: transparent;
 }
-
-
 @media all and (max-width:639px) {
 	.fancybox-close {
-		top: -6px;
-		right: -8px;
+		right:15px;
+		top:18px;
+	}
+	.fancybox-title-over-wrap {
+		left:15px;
+		top:20px;
 	}
 	.fancybox-prev span {
 		left: 10px;
@@ -286,30 +290,35 @@
 		right: 10px;
 	}
 	.fancybox-skin {
-		padding:36px 0;
+		padding:60px 0;
 	}
 	.fancybox-prev:before {
 		content: '';
-		position: absolute;
-		left: 0;
-		top: 50%;
-		width: 36px;
-		height: 49px;
-		margin-top: -24px;
-		background: rgba(0,0,0,0.75);
+		position:absolute;
+		left:0;
+		top:50%;
+		width:45px;
+		height:40px;
+		margin-top:-20px;
+		background:url('../img/fancy-mobile-arrows.png') no-repeat left top;
 	}
 	.fancybox-next:before {
 		content: '';
-		position: absolute;
-		right: 0;
-		top: 50%;
-		width: 36px;
-		height: 49px;
-		margin-top: -24px;
-		background: rgba(0,0,0,0.75);
+		position:absolute;
+		right:0;
+		top:50%;
+		width:45px;
+		height:40px;
+		margin-top:-20px;
+		background:url('../img/fancy-mobile-arrows.png') no-repeat right top;
+	}
+	.fancybox-prev:hover:before, .fancybox-next:hover:before {
+		background-color:rgba(0,0,0,0.8) !important;
+	}
+	.fancybox-prev span, .fancybox-next span {
+		display:none;
 	}
 }
-
 .fancybox-lock body {
     overflow: hidden !important;
 }

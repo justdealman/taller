@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, user-scalable=yes">
 	<!--<link href="./favicon.ico" rel="shortcut icon">-->
 	<link href="./css/style.css" rel="stylesheet">
+	<link href="./css/adaptive.css" rel="stylesheet">
+	<link href="./fancybox/style.css" rel="stylesheet">
 	<!--[if IE 8]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -45,6 +47,10 @@
 						<li><a href="#">Оплата и доставка</a></li>
 					</ul>
 				</nav>
+				<ul class="menu-mini">
+					<li><span class="profile"></li>
+					<li><span class="menu"></li>
+				</ul>
 			</div>
 		</header>
 		<div class="vitrina">
@@ -53,7 +59,6 @@
 				<li class="active"><a href="#">Мои лоты</a></li>
 				<li><a href="#">Уведомления</a></li>
 			</ul>
-			<p class="all">Всего лотов на аукционе: <strong>1 458</strong></p>
 			<h1>Мои лоты <span class="button refresh">обновить</button></h1>
 			<ul class="mylots-nav">
 				<li class="active"><a href="#">Все лоты</a></li>
@@ -66,9 +71,26 @@
 					<li class="grid active"></li>
 					<li class="list"></li>
 				</ul>
+				<div class="sort">
+					<select>
+						<option>По популярности ↓</option>
+						<option>По популярности ↑</option>
+						<option>По дате добавления ↓</option>
+						<option>По дате добавления ↑</option>
+						<option>По номеру лота ↓</option>
+						<option>По номеру лота ↑</option>
+					</select>
+				</div>
 				<div class="search-e">
 					<input type="text" placeholder="Поиск по лотам">
 					<input type="submit" value="">
+				</div>
+				<div class="quantity">
+					<select>
+						<option>20 шт.</option>
+						<option>40 шт.</option>
+						<option>80 шт.</option>
+					</select>
 				</div>
 			</div>
 			<div class="table">
@@ -265,6 +287,8 @@
 						</tr>
 					</tbody>
 				</table>
+				<span class="prev"></span>
+				<span class="next"></span>
 			</div>
 		</div>
 		<div class="clear"></div>
@@ -301,12 +325,67 @@
 			</p>
 		</div>
 	</footer>
+	<div class="user-mini">
+		<div>
+			<h3><a href="#">kollektioner1982</a></h3>
+			<ul>
+				<li><a href="#">Мои данные</a></li>
+				<li><a href="#">Мои лоты</a></li>
+				<li><a href="#">Уведомления</a></li>
+			</ul>
+			<button><span>Выйти</span></button>
+		</div>
+		<span class="close"></span>
+	</div>
+	<div class="menu-mini-show">
+		<ul class="main">
+			<li>
+				<a href="#">Текущий аукцион</a>
+				<ul>
+					<li><a href="#">Монеты России до 1917 года</a></li>
+					<li><a href="#">Монеты РСФСР, СССР, России</a></li>
+					<li><a href="#">Монеты иностранные</a></li>
+					<li><a href="#">Банкноты</a></li>
+					<li><a href="#">Книги</a></li>
+					<li><a href="#">Открытки</a></li>
+					<li><a href="#">Статуэтки</a></li>
+					<li><a href="#">Мелкий антиквариат</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Архив аукционов</a>
+				<ul>
+					<li><a href="#">Монеты России до 1917 года</a></li>
+					<li><a href="#">Монеты РСФСР, СССР, России</a></li>
+					<li><a href="#">Монеты иностранные</a></li>
+					<li><a href="#">Банкноты</a></li>
+					<li><a href="#">Книги</a></li>
+					<li><a href="#">Открытки</a></li>
+					<li><a href="#">Статуэтки</a></li>
+					<li><a href="#">Мелкий антиквариат</a></li>
+				</ul></li>
+			<li><a href="#">Правила</a></li>
+			<li><a href="#">Оплата и доставка</a></li>
+			<li><a href="#">Выставить лот</a></li>
+		</ul>
+		<ul class="sub">
+			<li><a href="#">Об аукционе</a></li>
+			<li><a href="#">Новости аукциона</a></li>
+			<li><a href="#">Контакты</a></li>
+			<li><a href="#">Реквизиты</a></li>
+			<li><a href="#">Помощь</a></li>
+		</ul>
+		<span class="back"></span>
+		<span class="close"></span>
+	</div>
 	<script src="./js/jquery.js"></script>
 	<script src="./js/jquery-ui.js"></script>
 	<script src="./js/easing.js"></script>
 	<script src="./js/mobile.js"></script>
 	<script src="./js/slides.js"></script>
+	<script src="./js/touchswipe.js"></script>
 	<script src="./js/uniform.js"></script>
+	<script src="./fancybox/script.js"></script>
 	<script src="./js/dynamic.js"></script>
 </body>
 </html>
