@@ -274,7 +274,7 @@
 	line-height: 26px;
 	background: transparent;
 }
-@media all and (max-width:639px) {
+@media all and (max-width:759px) {
 	.fancybox-close {
 		right:15px;
 		top:18px;
