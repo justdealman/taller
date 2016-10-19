@@ -87,8 +87,9 @@ function tableScroll() {
 	});
 	t.swipe({
 		allowPageScroll: 'auto',
+		threshold: 20,
 		swipeStatus: function(event, phase, direction, distance) {
-			if ( phase == 'move' && direction == 'left' && distance > 20 ) {
+			if ( phase == 'move' && direction == 'left' ) {
 				t.removeClass('to-left');
 				var templeft = mleft+distance;
 				if ( templeft >= diff ) {
@@ -100,13 +101,13 @@ function tableScroll() {
 				});
 				pos(templeft);
 			}
-			if ( phase == 'end' && direction == 'left' && distance > 20 ) {
+			if ( phase == 'end' && direction == 'left' ) {
 				mleft = mleft+distance;
 				if ( mleft >= diff ) {
 					mleft = diff;
 				}
 			}
-			if ( phase == 'move' && direction == 'right' && distance > 20 ) {
+			if ( phase == 'move' && direction == 'right' ) {
 				t.removeClass('to-right');
 				var tempright = mleft-distance;
 				if ( tempright <= 0 ) {
@@ -118,7 +119,7 @@ function tableScroll() {
 				});
 				pos(tempright);
 			}
-			if ( phase == 'end' && direction == 'right' && distance > 20 ) {
+			if ( phase == 'end' && direction == 'right' ) {
 				mleft = mleft-distance;
 				if ( mleft <= 0 ) {
 					mleft = 0;
